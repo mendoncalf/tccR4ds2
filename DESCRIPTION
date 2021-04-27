@@ -1,0 +1,14 @@
+Package: tccR4ds2
+Title: Pacote para o projeto de TCC do curso R4DS2 da Curso-R (Abril, 2021)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Leandro",
+           family = "Mendonca",
+           role = c("aut", "cre"),
+           email = "lmendonca@gdmseeds.com")
+Description: Repositorio de trabalho para o projeto de conclusao de curso. Feito apenas com o objetivo de guardar os resultados e apresenta-los. As funcoes envetualmente construidas ficam disponibilizadas, mas pouco documentadas.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
