@@ -57,6 +57,13 @@ meus_voos = voos %>%
                    )
 
 
+glimpse(meus_voos)
+
+
+
+
+
+
 
 
 

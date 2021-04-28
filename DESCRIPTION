@@ -16,3 +16,10 @@ URL: https://github.com/mendoncalf/tccR4ds2
 BugReports: https://github.com/mendoncalf/tccR4ds2/issues
 Depends: 
     R (>= 2.10)
+Imports: 
+    ggplot2,
+    dplyr,
+    magrittr,
+    forcats,
+    lubridate,
+    tidyr
