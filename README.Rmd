@@ -27,34 +27,44 @@ da curso-R, turma de abril de 2021.
 # install.packages("devtools")
 devtools::install_github("mendoncalf/tccR4ds2")
 ```
-## Por qual aeroporto devo chegar aos EUA? 
+# Por qual aeroporto devo chegar aos EUA? 
 
 Segundo a postagem do site [passageiro de primeira](https://passageirodeprimeira.com/lista-das-companhias-aereas-que-ainda-estao-voando-entre-os-eua-e-o-brasil/) os aeroportos nos EUA que mais recebem voos do Brasil são: Miami (MIA), Orlando (MCO), Nova York (JFK), Atlanta (ATL), Houston (IAH) e Fort Lauderdale (FLL). 
 
 Nesse contexto, nos propomos a analisar quais desses aeroportos seria a melhor opção para um Brasileiro chegar aos EUA. Ignorando parâmetros de preço de passagem aérea, e usando as bases de dados do pacote [`anyflights`](https://github.com/simonpcouch/anyflights), vamos avaliar a performance desses 6 aeroportos com base em **atrasos**,  **número de companhias aéreas**, **oferta de destinos**, e **conexões com destinos chave**. Foram considerados apenas os voos do ano de 2019 para a análise.
 
-### 1 - Atraso
+## 1 - Atrasos
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
-
 devtools::load_all()
 
 plot_atraso(col = atraso_partida,
             title = 'partida > 30min',
             atraso_min = lubridate::make_difftime(60*30))
+```
 
+<br>
+
+```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
 plot_atraso(col = atraso_chegada,
             title = 'chegada > 30min',
             atraso_min = lubridate::make_difftime(60*30))
-
-
-plot_atraso_serie(atraso_min = lubridate::make_difftime(60*30))
-
-
 ```
 
-### 2 - Número de companhas aéreas
+<br>
+
+```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
+plot_atraso_serie(atraso_min = lubridate::make_difftime(60*30))
+```
+
+<br>
+
+## 2 - Número de companhas aéreas
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
@@ -62,8 +72,11 @@ plot_count(col = companhia , title = 'Numero de companhia aéreas operando voos'
 
 ```
 
+<br>
 
-### 3 - Oferta de destinos
+## 3 - Oferta de destinos
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
@@ -71,7 +84,11 @@ destinos_semana(min_ocorencias = 100, title = "Destinos por dia da semana")
 
 ```
 
-### 4 - Oferta de destinos especiais
+<br>
+
+## 4 - Oferta de destinos especiais
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
@@ -80,8 +97,11 @@ destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD'),
 
 ```
 
+<br>
 
-### Extra - Curiosidade: maiores atrasos e antecipações de cada aeroporto
+## Extra - Curiosidade: maiores atrasos e antecipações de cada aeroporto
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 meus_voos %>%
@@ -97,6 +117,8 @@ meus_voos %>%
 
 
 ```
+
+<br>
 
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
