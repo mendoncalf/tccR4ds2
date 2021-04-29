@@ -64,7 +64,7 @@ plot_atraso_serie <- function(atraso_min) {
     ggplot2::ggplot()+
     ggplot2::facet_wrap(~.data$tipo)+
     ggplot2::aes(x = .data$data, y = .data$atraso, color = .data$origem)+
-    ggplot2::geom_line(size = 1)+ ggplot2::labs(x="")+
+    ggplot2::geom_line(size = 1)+ ggplot2::labs(x="", y = "% voos com atraso")+
     ggplot2::theme(legend.title = ggplot2::element_blank())
 }
 
