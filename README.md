@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/mendoncalf/tccR4ds2/workflows/R-CMD-check/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions)
+[![pkgdown](https://github.com/mendoncalf/tccR4ds2/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
 O objetivo desse pacote é servir de repositório para as análises do TCC
