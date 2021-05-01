@@ -15,7 +15,9 @@ do curso de R4DS2 da curso-R, turma de abril de 2021.
 ## Instalação
 
 Esse pacote tem como subproduto de suas analises algumas funções. Para
-saber mais sobre elas, instale o pacote e leia a documentação.
+saber mais sobre elas, instale o pacote e leia a documentação ou acesse
+o [site do pacote](https://mendoncalf.github.io/tccR4ds2/) e veja os
+[exemplos](https://mendoncalf.github.io/tccR4ds2/articles/funcoes.html).
 
 ``` r
 # install.packages("devtools")
