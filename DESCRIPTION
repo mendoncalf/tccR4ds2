@@ -23,3 +23,7 @@ Imports:
     forcats,
     lubridate,
     tidyr
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr

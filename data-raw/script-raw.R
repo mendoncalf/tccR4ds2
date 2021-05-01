@@ -1,4 +1,6 @@
 
+# vignets / atualizar site
+# testthat/ rcov/ actions
 
 devtools::load_all()
 library(magrittr, include.only = '%>%')

@@ -1,0 +1,39 @@
+---
+title: "Demostração das funções"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Demostração das funções}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tccR4ds2)
+
+#Base de dados
+meus_voos %>% 
+  dplyr::glimpse()
+
+# Plot atraso
+plot_atraso(col = atraso_partida,
+            title = 'partida > 30min',
+            atraso_min = lubridate::make_difftime(60*30))
+
+#plot atraso serie
+plot_atraso_serie(atraso_min = lubridate::make_difftime(60*30))
+
+# plot count
+plot_count(col = companhia , title = 'Numero de companhia aéreas operando voos')
+
+#Destino semana
+destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD','ORD'), min_ocorencias = 100,title = "Destinos clave por dia da semana")
+
+
+```
