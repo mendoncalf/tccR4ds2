@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/mendoncalf/tccR4ds2/workflows/R-CMD-check/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions)
 [![pkgdown](https://github.com/mendoncalf/tccR4ds2/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions/workflows/pkgdown.yaml)
 [![test-coverage](https://github.com/mendoncalf/tccR4ds2/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions/workflows/test-coverage.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/mendoncalf/tccR4ds2/branch/master/graph/badge.svg)](https://codecov.io/gh/mendoncalf/tccR4ds2?branch=master)
 <!-- badges: end -->
 
 O objetivo desse pacote é servir de repositório para as análises do TCC
