@@ -148,7 +148,7 @@ destinos_semana = function(destinos = NULL, min_ocorencias, title){
 #' @export
 #'
 #' @examples
-#' max_antecipado(meus_voos)
+#' max_atraso(meus_voos)
 max_atraso = function(data){
   data %>%
     dplyr::filter(.data$atraso_partida == max(.data$atraso_partida))

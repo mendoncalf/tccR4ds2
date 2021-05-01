@@ -16,5 +16,5 @@ uma linha do dataset \code{meus_voos}
 Funcao auxiliar - encontra o voo de maior atraso de partida
 }
 \examples{
-max_antecipado(meus_voos)
+max_atraso(meus_voos)
 }
