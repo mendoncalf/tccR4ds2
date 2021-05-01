@@ -4,6 +4,8 @@
 # tccR4ds2
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/mendoncalf/tccR4ds2/workflows/R-CMD-check/badge.svg)](https://github.com/mendoncalf/tccR4ds2/actions)
 <!-- badges: end -->
 
 O objetivo desse pacote é servir de repositório para as análises do TCC
