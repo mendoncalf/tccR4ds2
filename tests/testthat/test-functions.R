@@ -19,6 +19,11 @@ test_that("plot_count works", {
 test_that("destinos_semana works", {
   p = destinos_semana(min_ocorencias = 100, title = "Destinos por dia da semana")
   expect_type(p, "list")
+
+  destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD'),
+                  min_ocorencias = 100,title = "Destinos clave por dia da semana")
+  expect_type(p, "list")
+
 })
 
 test_that("max_atraso works", {
