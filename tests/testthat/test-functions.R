@@ -21,7 +21,7 @@ test_that("destinos_semana works", {
   expect_type(p, "list")
 
   p = destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD'),
-                  min_ocorencias = 100,title = "Destinos clave por dia da semana")
+                  min_ocorencias = 100,title = "Destinos chave por dia da semana")
   expect_type(p, "list")
 
 })

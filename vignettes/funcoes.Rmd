@@ -33,7 +33,7 @@ plot_atraso_serie(atraso_min = lubridate::make_difftime(60*30))
 plot_count(col = companhia , title = 'Numero de companhia aéreas operando voos')
 
 #Destino semana
-destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD','ORD'), min_ocorencias = 100,title = "Destinos clave por dia da semana")
+destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD','ORD'), min_ocorencias = 100,title = "Destinos chave por dia da semana")
 
 
 ```
