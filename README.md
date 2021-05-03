@@ -136,8 +136,7 @@ agora queremos saber se nossos 6 aeroportos favoritos possuem voos de
 conexão para essas cidades.
 
 Os destinos chave são: **Los Angeles**, **Las Vegas**, **São
-Francisco**, **Boston**, **Chicago** e por fim a capital **Washington
-D.C.**
+Francisco**, **Boston**, **Chicago** e a capital **Washington D.C.**
 
 Nesse quesito quase todos os aeroportos empatam, apenas **Miami (MIA)**
 falha em um dos destinos. Normal, afinal todas essas são grandes cidades

@@ -4,5 +4,3 @@
 .httr-oauth
 .DS_Store
 data-raw/voos.rds
-
-inst/doc

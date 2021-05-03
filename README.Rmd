@@ -121,7 +121,7 @@ destinos_semana(min_ocorencias = 100, title = "Destinos por dia da semana")
 
 Destinos ao montes são otimos, no entanto, os Brasileiros procuram cidades muito especificas nos EUA. Parte dessas cidades claro são as mesmas cidades dessa análise, mas existem outras tão procuradas quanto, mas que a frequencia de voos diretos do Brasil é baixa. Novamente fomos a *internet* e após algumas pesquisas selecionamos outras 6 cidades não contempladas na lista de cidades com mais voos diretos do Brasil. E agora queremos saber se nossos 6 aeroportos favoritos possuem voos de conexão para essas cidades. 
 
-Os destinos chave são: **Los Angeles**, **Las Vegas**, **São Francisco**, **Boston**, **Chicago** e por fim a capital **Washington D.C.**
+Os destinos chave são: **Los Angeles**, **Las Vegas**, **São Francisco**, **Boston**, **Chicago** e a capital **Washington D.C.**
 
 Nesse quesito quase todos os aeroportos empatam, apenas **Miami (MIA)** falha em um dos destinos. Normal, afinal todas essas são grandes cidades e é esperado que os principais aeroportos se conectem a elas.
 
@@ -129,7 +129,7 @@ Nesse quesito quase todos os aeroportos empatam, apenas **Miami (MIA)** falha em
 ```{r echo = FALSE, warning=FALSE, message = FALSE, fig.align='center'}
 
 destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD'),
-                             min_ocorencias = 100,title = "Destinos clave por dia da semana")
+                             min_ocorencias = 100,title = "Destinos chave por dia da semana")
 
 ```
 
