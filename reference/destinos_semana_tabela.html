@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO — meus_voos • tccR4ds2</title>
+<title>Tabela de coincidencia origem-destino — destinos_semana_tabela • tccR4ds2</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO — meus_voos" />
-<meta property="og:description" content="Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO" />
+<meta property="og:title" content="Tabela de coincidencia origem-destino — destinos_semana_tabela" />
+<meta property="og:description" content="Produz uma tabela com todas as origem nas linhas e destinos selecionados nas colunas, marcando 'X' se o voo existir." />
 
 
 
@@ -120,42 +120,82 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mendoncalf/tccR4ds2/blob/master/R/dados.R'><code>R/dados.R</code></a></small>
-    <div class="hidden name"><code>meus_voos.Rd</code></div>
+    <h1>Tabela de coincidencia origem-destino</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mendoncalf/tccR4ds2/blob/master/R/functions.R'><code>R/functions.R</code></a></small>
+    <div class="hidden name"><code>destinos_semana_tabela.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO</p>
+    <p>Produz uma tabela com todas as origem nas linhas e destinos selecionados nas colunas, marcando 'X' se o voo existir.</p>
     </div>
 
-    <pre class="usage"><span class='va'>meus_voos</span></pre>
+    <pre class="usage"><span class='fu'>destinos_semana_tabela</span><span class='op'>(</span>destinos <span class='op'>=</span> <span class='cn'>NULL</span>, min_ocorencias <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>destinos</th>
+      <td><p>vetor de string dos aeroportos de destino de interesse. Use a sigla FAA igual espeficicado no pacote <code>anyflyghts</code>. Default = NULL tras todos os destinos</p></td>
+    </tr>
+    <tr>
+      <th>min_ocorencias</th>
+      <td><p>numero minimo de ocorrencias para que seja considerado um destino regular.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Uma dataframe com 1018199 linhas e 14 variavies:</p><dl>
-<dt>ano</dt><dd><p>ano do voo</p></dd>
-<dt>mes</dt><dd><p>mes do voo</p></dd>
-<dt>dia</dt><dd><p>dia do voo</p></dd>
-<dt>data</dt><dd><p>data do voo</p></dd>
-<dt>semana</dt><dd><p>semana do voo</p></dd>
-<dt>hora_partida</dt><dd><p>horario de partida do voo</p></dd>
-<dt>atraso_partida</dt><dd><p>diferenca de entre entre a saida real e a saida programanda</p></dd>
-<dt>atrasou_partida</dt><dd><p>indica se houve ou não atraso na partida</p></dd>
-<dt>atraso_chegada</dt><dd><p>diferenca de entre entre a chegada real e a chegada programanda</p></dd>
-<dt>atrasou_chegada</dt><dd><p>indica se houve ou não atraso na chegada</p></dd>
-<dt>companhia</dt><dd><p>empresa aerea que opera o voo</p></dd>
-<dt>origem</dt><dd><p>aeroporto de origem</p></dd>
-<dt>destino</dt><dd><p>aeroporto de destino</p></dd>
-<dt>distancia</dt><dd><p>distancia entre origem e destino</p></dd>
+    <p>uma tabela</p>
 
-</dl>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://github.com/simonpcouch/anyflights'>https://github.com/simonpcouch/anyflights</a></p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>destinos_semana_tabela</span><span class='op'>(</span>destinos <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'SFO'</span>, <span class='st'>'LAX'</span><span class='op'>)</span>, min_ocorencias <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
+#&gt; 
+#&gt; |diasemana |origem |LAX |SFO |
+#&gt; |:---------|:------|:---|:---|
+#&gt; |Sun       |ATL    |ok  |ok  |
+#&gt; |Sun       |FLL    |ok  |ok  |
+#&gt; |Sun       |IAH    |ok  |ok  |
+#&gt; |Sun       |JFK    |ok  |ok  |
+#&gt; |Sun       |MCO    |ok  |ok  |
+#&gt; |Sun       |MIA    |ok  |ok  |
+#&gt; |Mon       |ATL    |ok  |ok  |
+#&gt; |Mon       |FLL    |ok  |ok  |
+#&gt; |Mon       |IAH    |ok  |ok  |
+#&gt; |Mon       |JFK    |ok  |ok  |
+#&gt; |Mon       |MCO    |ok  |ok  |
+#&gt; |Mon       |MIA    |ok  |ok  |
+#&gt; |Tue       |ATL    |ok  |ok  |
+#&gt; |Tue       |FLL    |ok  |ok  |
+#&gt; |Tue       |IAH    |ok  |ok  |
+#&gt; |Tue       |JFK    |ok  |ok  |
+#&gt; |Tue       |MCO    |ok  |ok  |
+#&gt; |Tue       |MIA    |ok  |ok  |
+#&gt; |Wed       |ATL    |ok  |ok  |
+#&gt; |Wed       |FLL    |ok  |ok  |
+#&gt; |Wed       |IAH    |ok  |ok  |
+#&gt; |Wed       |JFK    |ok  |ok  |
+#&gt; |Wed       |MCO    |ok  |ok  |
+#&gt; |Wed       |MIA    |ok  |ok  |
+#&gt; |Thu       |ATL    |ok  |ok  |
+#&gt; |Thu       |FLL    |ok  |ok  |
+#&gt; |Thu       |IAH    |ok  |ok  |
+#&gt; |Thu       |JFK    |ok  |ok  |
+#&gt; |Thu       |MCO    |ok  |ok  |
+#&gt; |Thu       |MIA    |ok  |ok  |
+#&gt; |Fri       |ATL    |ok  |ok  |
+#&gt; |Fri       |FLL    |ok  |ok  |
+#&gt; |Fri       |IAH    |ok  |ok  |
+#&gt; |Fri       |JFK    |ok  |ok  |
+#&gt; |Fri       |MCO    |ok  |ok  |
+#&gt; |Fri       |MIA    |ok  |ok  |
+#&gt; |Sat       |ATL    |ok  |ok  |
+#&gt; |Sat       |FLL    |ok  |ok  |
+#&gt; |Sat       |IAH    |ok  |ok  |
+#&gt; |Sat       |JFK    |ok  |ok  |
+#&gt; |Sat       |MCO    |ok  |ok  |
+#&gt; |Sat       |MIA    |ok  |ok  |</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -148,9 +148,445 @@
 <a href="#4---oferta-de-destinos-chave" class="anchor"></a>4 - Oferta de destinos chave</h2>
 <p><br></p>
 <p>Destinos ao montes são otimos, no entanto, os Brasileiros procuram cidades muito especificas nos EUA. Parte dessas cidades claro são as mesmas cidades dessa análise, mas existem outras tão procuradas quanto, mas que a frequencia de voos diretos do Brasil é baixa. Novamente fomos a <em>internet</em> e após algumas pesquisas selecionamos outras 6 cidades não contempladas na lista de cidades com mais voos diretos do Brasil. E agora queremos saber se nossos 6 aeroportos favoritos possuem voos de conexão para essas cidades.</p>
-<p>Os destinos chave são: <strong>Los Angeles</strong>, <strong>Las Vegas</strong>, <strong>São Francisco</strong>, <strong>Boston</strong>, <strong>Chicago</strong> e a capital <strong>Washington D.C.</strong></p>
+<p>Os destinos chave são: <strong>Los Angeles (LAX)</strong>, <strong>Las Vegas (LAS)</strong>, <strong>São Francisco (SFO)</strong>, <strong>Boston (BOS)</strong>, <strong>Chicago (ORD)</strong> e a capital <strong>Washington D.C.(IAD)</strong></p>
 <p>Nesse quesito quase todos os aeroportos empatam, apenas <strong>Miami (MIA)</strong> falha em um dos destinos. Normal, afinal todas essas são grandes cidades e é esperado que os principais aeroportos se conectem a elas.</p>
 <p><img src="reference/figures/README-unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;"></p>
+<p><br></p>
+<p><strong>Tabela Origens <em>vs</em> Destinos chave</strong></p>
+<table class="table">
+<thead><tr class="header">
+<th align="left">diasemana</th>
+<th align="left">origem</th>
+<th align="left">BOS</th>
+<th align="left">IAD</th>
+<th align="left">LAS</th>
+<th align="left">LAX</th>
+<th align="left">ORD</th>
+<th align="left">SFO</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">dom</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">dom</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">dom</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">dom</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">dom</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">dom</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">seg</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">seg</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">seg</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">seg</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">seg</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">seg</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">ter</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">ter</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">ter</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">ter</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">ter</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">ter</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qua</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qua</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qua</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qua</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qua</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qua</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qui</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qui</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qui</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qui</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">qui</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">qui</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sex</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sex</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sex</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sex</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sex</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sex</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sáb</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sáb</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sáb</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sáb</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">sáb</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">sáb</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">sem voo</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <div id="placar-4" class="section level3">
 <h3 class="hasAnchor">

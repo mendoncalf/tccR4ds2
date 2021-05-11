@@ -132,7 +132,273 @@
 <span class="co">#Destino semana</span>
 <span class="fu"><a href="../reference/destinos_semana.html">destinos_semana</a></span><span class="op">(</span>destinos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'SFO'</span>, <span class="st">'LAX'</span>, <span class="st">'LAS'</span>, <span class="st">'BOS'</span>, <span class="st">'IAD'</span>,<span class="st">'ORD'</span><span class="op">)</span>, min_ocorencias <span class="op">=</span> <span class="fl">100</span>,title <span class="op">=</span> <span class="st">"Destinos chave por dia da semana"</span><span class="op">)</span></code></pre></div>
 <p><img src="funcoes_files/figure-html/setup-4.png" width="700"></p>
-  </div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
+<span class="co">#Destino semana Tabela</span>
+<span class="fu"><a href="../reference/destinos_semana_tabela.html">destinos_semana_tabela</a></span><span class="op">(</span>destinos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'SFO'</span>, <span class="st">'LAX'</span><span class="op">)</span>, min_ocorencias <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">diasemana</th>
+<th align="left">origem</th>
+<th align="left">LAX</th>
+<th align="left">SFO</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Sun</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sun</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Sun</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sun</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Sun</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sun</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Mon</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Mon</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Mon</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Mon</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Mon</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Mon</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Tue</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Tue</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Tue</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Tue</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Tue</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Tue</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Wed</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Wed</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Wed</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Wed</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Wed</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Wed</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Thu</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Thu</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Thu</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Thu</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Thu</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Thu</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Fri</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Fri</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Fri</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Fri</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Fri</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Fri</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Sat</td>
+<td align="left">ATL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sat</td>
+<td align="left">FLL</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Sat</td>
+<td align="left">IAH</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sat</td>
+<td align="left">JFK</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="odd">
+<td align="left">Sat</td>
+<td align="left">MCO</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+<tr class="even">
+<td align="left">Sat</td>
+<td align="left">MIA</td>
+<td align="left">ok</td>
+<td align="left">ok</td>
+</tr>
+</tbody>
+</table>
+</div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
