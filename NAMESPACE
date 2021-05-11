@@ -2,6 +2,7 @@
 
 export("%>%")
 export(destinos_semana)
+export(destinos_semana_tabela)
 export(max_antecipado)
 export(max_atraso)
 export(plot_atraso)

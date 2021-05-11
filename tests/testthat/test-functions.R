@@ -40,3 +40,13 @@ test_that("meus_voos works", {
                                       "atraso_chegada", "atrasou_chegada", "companhia",
                                       "origem", "destino", "distancia"))
 })
+
+test_that("destinos_semana works", {
+  expect_error(destinos_semana_tabela(min_ocorencias = 100))
+  expect_error(destinos_semana_tabela())
+
+  tab = class(destinos_semana_tabela(destinos = 'LAX', min_ocorencias = 100))
+  expect_equal(tab,"knitr_kable")
+
+})
+

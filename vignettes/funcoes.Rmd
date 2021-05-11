@@ -35,5 +35,7 @@ plot_count(col = companhia , title = 'Numero de companhia aéreas operando voos'
 #Destino semana
 destinos_semana(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD','ORD'), min_ocorencias = 100,title = "Destinos chave por dia da semana")
 
+#Destino semana Tabela
+destinos_semana_tabela(destinos = c('SFO', 'LAX'), min_ocorencias = 100)
 
 ```

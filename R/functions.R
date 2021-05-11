@@ -114,8 +114,7 @@ destinos_semana = function(destinos = NULL, min_ocorencias, title){
   if(!is.null(destinos)){
     meus_voos2 = tccR4ds2::meus_voos %>%
       dplyr::filter(.data$destino %in% destinos)
-  }
-  else{
+  }else{
     meus_voos2 = tccR4ds2::meus_voos
   }
 
@@ -169,5 +168,39 @@ max_antecipado = function(data){
 }
 
 
+#' Tabela de coincidencia origem-destino
+#'
+#' Produz uma tabela com todas as origem nas linhas e destinos selecionados nas colunas, marcando 'X' se o voo existir.
+#'
+#' @param destinos vetor de string dos aeroportos de destino de interesse. Use a sigla FAA igual espeficicado no pacote `anyflyghts`. Default = NULL tras todos os destinos
+#' @param min_ocorencias numero minimo de ocorrencias para que seja considerado um destino regular.
+#'
+#' @return uma tabela
+#' @export
+#'
+#' @examples
+#' destinos_semana_tabela(destinos = c('SFO', 'LAX'), min_ocorencias = 100)
+destinos_semana_tabela = function(destinos = NULL, min_ocorencias = NULL){
 
+  if(is.null(destinos)){stop("destinos must be declared")}
+  if(is.null(min_ocorencias)){stop("min_ocorencias must be declared")}
+
+  meus_voos2 = tccR4ds2::meus_voos %>%
+    dplyr::filter(.data$destino %in% destinos)
+
+  meus_voos2 %>%
+    dplyr::mutate(diasemana = lubridate::wday(.data$data, label = TRUE)) %>%
+    dplyr::group_by(.data$origem, .data$diasemana, .data$destino) %>%
+    dplyr::summarise(n = dplyr::n()) %>%
+    dplyr::filter(.data$n > min_ocorencias)%>%
+    dplyr::mutate(check = 'ok') %>%
+    dplyr::select(-.data$n) %>%
+    dplyr::arrange(.data$diasemana) %>%
+    tidyr::pivot_wider(names_from = .data$destino, values_from = .data$check) %>%
+    dplyr::relocate(.data$diasemana) %>%
+    dplyr::mutate(dplyr::across(
+      .cols = dplyr::everything(),
+      .fns = ~tidyr::replace_na(.x, 'sem voo'))) %>%
+    knitr::kable()
+}
 

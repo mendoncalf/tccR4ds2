@@ -135,14 +135,64 @@ contempladas na lista de cidades com mais voos diretos do Brasil. E
 agora queremos saber se nossos 6 aeroportos favoritos possuem voos de
 conexão para essas cidades.
 
-Os destinos chave são: **Los Angeles**, **Las Vegas**, **São
-Francisco**, **Boston**, **Chicago** e a capital **Washington D.C.**
+Os destinos chave são: **Los Angeles (LAX)**, **Las Vegas (LAS)**, **São
+Francisco (SFO)**, **Boston (BOS)**, **Chicago (ORD)** e a capital
+**Washington D.C.(IAD)**
 
 Nesse quesito quase todos os aeroportos empatam, apenas **Miami (MIA)**
 falha em um dos destinos. Normal, afinal todas essas são grandes cidades
 e é esperado que os principais aeroportos se conectem a elas.
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" />
+
+<br>
+
+**Tabela Origens *vs* Destinos chave**
+
+| diasemana | origem | BOS | IAD     | LAS | LAX | ORD | SFO |
+|:----------|:-------|:----|:--------|:----|:----|:----|:----|
+| dom       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| dom       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| dom       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| dom       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| dom       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| dom       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| seg       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| seg       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| seg       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| seg       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| seg       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| seg       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| ter       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| ter       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| ter       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| ter       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| ter       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| ter       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| qua       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qua       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qua       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qua       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qua       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qua       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| qui       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qui       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qui       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qui       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qui       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| qui       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| sex       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sex       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sex       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sex       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sex       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sex       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
+| sáb       | ATL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sáb       | FLL    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sáb       | IAH    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sáb       | JFK    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sáb       | MCO    | ok  | ok      | ok  | ok  | ok  | ok  |
+| sáb       | MIA    | ok  | sem voo | ok  | ok  | ok  | ok  |
 
 <br>
 

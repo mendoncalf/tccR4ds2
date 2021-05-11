@@ -3,7 +3,7 @@
 \docType{data}
 \name{meus_voos}
 \alias{meus_voos}
-\title{Meus voos}
+\title{Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO}
 \format{
 Uma dataframe com 1018199 linhas e 14 variavies:
 \describe{
@@ -30,6 +30,6 @@ Uma dataframe com 1018199 linhas e 14 variavies:
 meus_voos
 }
 \description{
-Subset da base  do pacote anyflights, somente com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO
+Meus voos: dataset com os voos do ano de 2019 com origem nos aeroportos de MIA, JFK, ATL, FLL, IAH e MCO
 }
 \keyword{datasets}

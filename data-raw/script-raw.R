@@ -146,12 +146,35 @@ meus_voos %>%
   knitr::kable()
 
 
+#### tabela dupla entrada
 
+# destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD')
+# min_ocorencias = 100
 
+destinos_semana_tabela = function(destinos = NULL, min_ocorencias = NULL){
 
+  if(is.null(destinos)){stop("destinos must be declared")}
+  if(is.null(min_ocorencias)){stop("min_ocorencias must be declared")}
 
+  meus_voos2 = tccR4ds2::meus_voos %>%
+    dplyr::filter(.data$destino %in% destinos)
 
+  meus_voos2 %>%
+    dplyr::mutate(diasemana = lubridate::wday(.data$data, label = TRUE)) %>%
+    dplyr::group_by(.data$origem, .data$diasemana, .data$destino) %>%
+    dplyr::summarise(n = dplyr::n()) %>%
+    dplyr::filter(.data$n > min_ocorencias)%>%
+    dplyr::mutate(check = 'X') %>%
+    dplyr::select(-n, -diasemana) %>%
+    dplyr::arrange(diasemana) %>%
+    tidyr::pivot_wider(names_from = destino, values_from = check) %>%
+    dplyr::mutate(dplyr::across(
+        .cols = dplyr::everything(),
+        .fns = ~tidyr::replace_na(.x, 'sem voo'))) %>%
+    knitr::kable()
+}
 
+destinos_semana_tabela(destinos = c('SFO', 'LAX', 'LAS', 'BOS', 'IAD', 'ORD'), min_ocorencias = 100)
 
 
 
