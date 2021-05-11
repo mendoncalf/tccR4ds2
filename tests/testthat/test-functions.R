@@ -43,7 +43,7 @@ test_that("meus_voos works", {
 
 test_that("destinos_semana works", {
   expect_error(destinos_semana_tabela(min_ocorencias = 100))
-  expect_error(destinos_semana_tabela())
+  expect_error(destinos_semana_tabela(destinos = 'LAX'))
 
   tab = class(destinos_semana_tabela(destinos = 'LAX', min_ocorencias = 100))
   expect_equal(tab,"knitr_kable")
